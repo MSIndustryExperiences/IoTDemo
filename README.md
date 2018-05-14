@@ -1,8 +1,7 @@
----
-title: IoTDemo
----
 
-Demo code used in various manufacturing events by \@diegotamburini and \@ercenk.
+# An IoT Demo
+
+This is the walkthrough of the demo used in various manufacturing events by \@diegotamburini and \@ercenk.
 
 The demo intends to showcase the scenario for collecting data from a device with
 internet connectivity, and the underlying platform services for processing and
@@ -13,7 +12,7 @@ board (an [Adafruit Feather HUZZAH with
 ESP8266](https://www.adafruit.com/product/2821)) that measures the RPM of the
 wheel and sends that data to the cloud.
 
-![](assets/crank.gif)
+![](./assets/crank.gif)
 
 There are two magnets attached to the wheel, that pass in front of a [hall
 effect sensor](https://en.wikipedia.org/wiki/Hall_effect_sensor). The sensor is
@@ -28,14 +27,14 @@ periodically, containing the RPM data. There is a stream analytics job that
 reads the data from the IoT Hub and copies the data to a Microsoft Azure Storage
 blob, as well as exposes it on Power BI.
 
-![A close up of a logo Description generated with high confidence](assets/highlevel.png)
+![A close up of a logo Description generated with high confidence](./assets/highlevel.png)
 
 A close up of a logo Description generated with high confidence
 
 We would like to create a live tile on the PowerBI dashboard that will be
 displaying the incoming data, looking like the following:
 
-![A close up of text on a white background Description generated with high confidence](assets/RPMChart.gif)
+![A close up of text on a white background Description generated with high confidence](./assets/RPMChart.gif)
 
 A close up of text on a white background Description generated with high
 confidence
@@ -131,7 +130,7 @@ We will have only one input, for the data coming in from the IoT Hub. For that,
 go to your resource group, and add a new “Streaming Analytics Job” resource.
 Once the resource is deployed, add an “IoT Hub” streaming input.
 
-![A screenshot of a cell phone Description generated with very high confidence](assets/ASASteps.png)
+![A screenshot of a cell phone Description generated with very high confidence](./assets/ASASteps.png)
 
 A screenshot of a cell phone Description generated with very high confidence
 
@@ -172,7 +171,7 @@ new dashboard.
 Add a new tile to the dashboard, and add a “Custom Streaming Data” tile from the
 “Real-Time Data” section.
 
-![A screenshot of a cell phone Description generated with very high confidence](assets/ASAOutputSteps.png)
+![A screenshot of a cell phone Description generated with very high confidence](./assets/ASAOutputSteps.png)
 
 Then select the dataset you just created, select the visualization style, as
 well as the data you want to display.
